@@ -1,0 +1,17 @@
+server:
+  port: 8088
+  
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: github
+
+---
+spring:
+  profiles: github
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/iborraxavi/library-config
